@@ -51,12 +51,17 @@ while antal_omgångar_körda  < antal_omgångar :
     exakt_rätt = 0
     fel_plats = 0
     i = 0
-    while i< 4 or 1 = 4 :
-        if rand_num[i] == int(gissing[i]) :
+    while i< 4 or 1 == 4 :
+        if rand_num[i] == int(gissning[i]) :
             exakt_rätt = exakt_rätt + 1
-        elif int(gissning[i]) is in rand_num :
+        elif int(gissning[i]) in rand_num :
             fel_plats = fel_plats + 1
         else :
             None
-    
+        i = i + 1 
+    print(f"rätt : {exakt_rätt}")
+    print(f"rätt men fel plat men fel platss : {fel_plats}")
+    print(f"{"Y"*exakt_rätt}{"H"*fel_plats}")
+
+
     antal_omgångar_körda  = antal_omgångar_körda  + 1
