@@ -16,4 +16,4 @@ Har börjat på mastermind charlie tar säkert hand om tvåan för mig, mer exak
 Leo Syrencrantz 16 november
 
 Har fortsatt arbeta på mastermind jag har gjort datorspelaren och börjat på feedbacken efter varje gissning. Den har ett problem med att den dubbelräknar men det kommer jag fixa nästa gång
-
+s
