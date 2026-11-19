@@ -48,27 +48,15 @@ while antal_omgångar_körda  < antal_omgångar :
     print("this has endend") 
     print(gissning)
 
-   
-
-    i = 0 
-    while i < 4:
-        
-        if int(gissning[i]) == rand_num[i]:
-            print("Y", end = " ")
-        else :
-            None
-        
-
-        i = i + 1
-    
-
-
+    exakt_rätt = 0
+    fel_plats = 0
     i = 0
-    while i < 4 :
-        if int(gissning[i]) in rand_num:
-            print("#" * rand_num.count(int(gissning[i])) , end = " " )
-
+    while i< 4 or 1 = 4 :
+        if rand_num[i] == int(gissing[i]) :
+            exakt_rätt = exakt_rätt + 1
+        elif int(gissning[i]) is in rand_num :
+            fel_plats = fel_plats + 1
         else :
             None
-        i = i + 1
+    
     antal_omgångar_körda  = antal_omgångar_körda  + 1
