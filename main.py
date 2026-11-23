@@ -3,6 +3,8 @@ print("Datorn kommer att slumpa fram en kod på fyra siffror mellan 1 och 6\n Du
 
 print("\n\nDu får välja mellan två svårighetsnivåer:\nLättare nivå: Alla siffror är garanterat olika\nSvårare nivå: Det kan finnas en upprepning av en eller flera siffror")
 
+gissningar_list = []
+feedback_list = []
 while True:
     nivå = int(input("Ange önskad nivå: lättare (1), svårare (2) ->"))
     if nivå == 1 or nivå == 2 :
@@ -47,7 +49,8 @@ while antal_omgångar_körda  < antal_omgångar :
             None
     print("this has endend") 
     print(gissning)
-
+    gissningar_list.append(gissning)
+    
     exakt_rätt = 0
     fel_plats = 0
     i = 0
@@ -59,9 +62,21 @@ while antal_omgångar_körda  < antal_omgångar :
         else :
             None
         i = i + 1 
-    print(f"rätt : {exakt_rätt}")
-    print(f"rätt men fel plat men fel platss : {fel_plats}")
-    print(f"{"Y"*exakt_rätt}{"H"*fel_plats}")
+    
+
+    feedback = f"{"Y"*exakt_rätt}{"H"*fel_plats}"
+    feedback_list.append(feedback)  
+    print(f"DRAG#        Drag        Feedback")
+    
+    for i in range(antal_omgångar_körda+1) :
+        print(i+1)
+        print(gissningar_list[i])
+        print(feedback_list[i])
+
+
+
+
+
 
 
     antal_omgångar_körda  = antal_omgångar_körda  + 1
