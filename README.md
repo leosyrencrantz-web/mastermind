@@ -17,3 +17,12 @@ Leo Syrencrantz 16 november
 
 Har fortsatt arbeta på mastermind jag har gjort datorspelaren och börjat på feedbacken efter varje gissning. Den har ett problem med att den dubbelräknar men det kommer jag fixa nästa gång
 s
+
+
+Leo Syrencrantz 19 november
+
+Har fortsatt arbeta var lite trött lekition och hade svårt att fokusera fixade problemet med att den dubbelräknade. Allt jag har kvar är att göra så att den sparar inputne och outputen och lägger till den till en lista. Och fixa upp koden och förbätträ den där jag kan.:
+
+Leo Syrencrantz 23 november
+
+Fixade utskriften efter varje runda och gjorde det omöljigt att stoppa in samma input flera gånger. Jag har kvar att göra så att man kan vinna
