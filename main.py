@@ -40,12 +40,18 @@ print(rand_num)
 antal_omgångar = 12
 antal_omgångar_körda = 0
 while antal_omgångar_körda  < antal_omgångar :
+    print(" ")
+    print(f"omgång {antal_omgångar_körda + 1}" )
     while True :
         gissning = input("Ange gissning som följd av fyra siffror ->")
-        if len(gissning) == 4 and gissning.isdigit() :
+        if gissning in gissningar_list :
+            print("Du har redan gissar på den här")
+
+        elif len(gissning) == 4 and gissning.isdigit() :
             break
+        
         else :
-            print("kom ihåg endast 4")
+            print("kom ihåg endast fyra styck ints")
             None
     print("this has endend") 
     print(gissning)
@@ -69,10 +75,12 @@ while antal_omgångar_körda  < antal_omgångar :
     print(f"DRAG#        Drag        Feedback")
     
     for i in range(antal_omgångar_körda+1) :
-        print(i+1)
-        print(gissningar_list[i])
+        print(i+1, end = " ")
+        print(5 * " " , end = " ")
+        print(gissningar_list[i], end = " ")
+        print(5 * " ", end = " " )
         print(feedback_list[i])
-
+        
 
 
 
