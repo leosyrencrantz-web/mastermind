@@ -1,10 +1,14 @@
 import random
-print("Datorn kommer att slumpa fram en kod på fyra siffror mellan 1 och 6\n Du ska försöka gissa denna kods siffror på max 12 drag\nEfter respektive gissning så kommer du få en respons:\nFör varje korrekt gissad siffra på korrekt plats i koden:\nFör varje korrekt gissad siffra på fel plats i koden:\nför dem siffror som inte finns med i koden ges ingen markering")
+print("✔")
+print("■")
+print("Datorn kommer att slumpa fram en kod på fyra siffror mellan 1 och 6\n Du ska försöka gissa denna kods siffror på max 12 drag\nEfter respektive gissning så kommer du få en respons:\nFör varje korrekt gissad siffra på korrekt plats i koden:✔\nFör varje korrekt gissad siffra på fel plats i koden:■\nför dem siffror som inte finns med i koden ges ingen markering")
 
 print("\n\nDu får välja mellan två svårighetsnivåer:\nLättare nivå: Alla siffror är garanterat olika\nSvårare nivå: Det kan finnas en upprepning av en eller flera siffror")
 win_state = False
 gissningar_list = []
 feedback_list = []
+
+
 while True:
     nivå = int(input("Ange önskad nivå: lättare (1), svårare (2) ->"))
     if nivå == 1 or nivå == 2 :
@@ -75,20 +79,28 @@ while antal_omgångar_körda  < antal_omgångar and win_state == False :
             None
         i = i + 1 
     
-
-    feedback = f"{"Y"*exakt_rätt}{"H"*fel_plats}"
+    
+    feedback = f"{"✔"*exakt_rätt}{"■"*fel_plats}"
     feedback_list.append(feedback)  
     print(f"DRAG#        Drag        Feedback")
     
-    for i in range(antal_omgångar_körda+1) :
-        print(i+1, end = " ")
-        print(5 * " " , end = " ")
-        print(gissningar_list[i], end = " ")
-        print(5 * " ", end = " " )
-        print(feedback_list[i])
+    if win_state == False :
+        for i in range(antal_omgångar_körda+1) :
+            print(i+1, end = " ")
+            print(5 * " " , end = " ")
+            print(gissningar_list[i], end = " ")
+            print(5 * " ", end = " " )
+            print(feedback_list[i])
+    elif win_state == True :
+        for x in range(12,antal_omgångar_körda -1,-1) :
+            print(x)
         
-
-
+        for i in range(antal_omgångar_körda,0,-1) :
+            print(i+1, end = " ")
+            print(5 * " " , end = " ")
+            print(gissningar_list[i], end = " ")
+            print(5 * " ", end = " " )
+            print(feedback_list[i])
 
 
 
