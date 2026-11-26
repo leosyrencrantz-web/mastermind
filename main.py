@@ -2,7 +2,7 @@ import random
 print("Datorn kommer att slumpa fram en kod på fyra siffror mellan 1 och 6\n Du ska försöka gissa denna kods siffror på max 12 drag\nEfter respektive gissning så kommer du få en respons:\nFör varje korrekt gissad siffra på korrekt plats i koden:\nFör varje korrekt gissad siffra på fel plats i koden:\nför dem siffror som inte finns med i koden ges ingen markering")
 
 print("\n\nDu får välja mellan två svårighetsnivåer:\nLättare nivå: Alla siffror är garanterat olika\nSvårare nivå: Det kan finnas en upprepning av en eller flera siffror")
-
+win_state = False
 gissningar_list = []
 feedback_list = []
 while True:
@@ -39,12 +39,18 @@ print(rand_num)
 
 antal_omgångar = 12
 antal_omgångar_körda = 0
-while antal_omgångar_körda  < antal_omgångar :
+while antal_omgångar_körda  < antal_omgångar and win_state == False :
     print(" ")
     print(f"omgång {antal_omgångar_körda + 1}" )
     while True :
         gissning = input("Ange gissning som följd av fyra siffror ->")
-        if gissning in gissningar_list :
+        
+        if gissning == str("".join(str(x) for x in rand_num)) :
+            print("Du har vunnit :D")
+            win_state = True
+            break
+
+        elif gissning in gissningar_list :
             print("Du har redan gissar på den här")
 
         elif len(gissning) == 4 and gissning.isdigit() :
