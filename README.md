@@ -26,3 +26,8 @@ Har fortsatt arbeta var lite trött lekition och hade svårt att fokusera fixade
 Leo Syrencrantz 23 november
 
 Fixade utskriften efter varje runda och gjorde det omöljigt att stoppa in samma input flera gånger. Jag har kvar att göra så att man kan vinna
+
+
+Leo Syrencrantz 26 november
+
+Fixade utskriften vid vinst och så att spelet vet ifall du har vunnit. Kan vara enklare att skriva om utskrift blocket från grunden. Kommer fortsätta med det och att städa upp variablerna och blocken och stoppa in allt i funktioner
